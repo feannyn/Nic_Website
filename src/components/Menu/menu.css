@@ -1,0 +1,10 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-Content: flex-start; 
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background-color: red;
+}
