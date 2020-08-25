@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
+import STRING_CONSTANTS from '../../res/strings';
+// import REACT_IMG from '../../res/images/react.png';
 import './hello.css';
-import { LoremIpsum } from 'react-lorem-ipsum';
 
-const Hello = () => {
-  const test = false;
+const Hello = (...props) => {
+  const [hello, setHello] = useState(false);
+
+  const helloComp = () => {
+    setHello(!hello);
+  };
 
   return (
-    <div className='hello'>
+    <div className='typewriter hello'>
       <h1>HELLO WORLD!</h1>
-      <h2>{test ? 'FALSE' : 'TRUE'}</h2>
-      <LoremIpsum p={2} />
+      <p>{STRING_CONSTANTS.HELLO}</p>
+      <photo img={hello} path={'TESTING PATH...NO IMG'} imgState={helloComp} test={'SHOULD NOT DISPLAY'}/>
     </div>
   );
 };

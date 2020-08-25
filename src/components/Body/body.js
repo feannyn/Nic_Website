@@ -12,7 +12,7 @@ const Body = ({ ...props }) => {
   const bodySections =
             sections.map(
               (Element) => {
-                return <Element key={Element.id}/>;
+                return <Element key={Element.id} />;
               }
             );
 

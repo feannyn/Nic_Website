@@ -9,10 +9,13 @@ const Menu = ({ location }) => {
 
   return (
     <div className='menu'>
-      <ul>
-        {sectionMap}
-      </ul>
+      <div className='sticky'>
+        <ul>
+          {sectionMap}
+        </ul>
+      </div>
     </div>
+
   );
 };
 
