@@ -1,19 +1,47 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
+import {
+  Neverzone,
+  dota2day
+} from '../../res/imagePaths';
 import './projects.css';
+// import options from './styles.js';
+import Carousel from 'react-bootstrap/Carousel';
 import Photo from '../Photo/photo.js';
 
 const Projects = () => {
+  const images = [
+    Neverzone,
+    dota2day
+  ];
+
   const [proj, setProjImage] = useState(true);
 
   const projComp = () => {
     setProjImage(!proj);
   };
 
+  const generateProjects = () => {
+    return images.map((imgPath, id) => {
+      return (
+        <Carousel.Item key={id}>
+          <Photo
+            incl={proj}
+            path={imgPath}
+            imgState={projComp}
+          />
+        </Carousel.Item>
+      );
+    });
+  };
+
   return (
-    <div className='projects'>
+    <div className='projects '>
       <h1>Projects</h1>
-      <Photo incl={proj} path={'TESTING PATH...No Img'} photoState={projComp} test={'CORRECT'}/>
+      <Carousel className='desc'>
+        {
+          generateProjects()
+        }
+      </Carousel>
     </div>
   );
 };
