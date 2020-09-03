@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import './menu.css';
 
 const Menu = ({ location }) => {
-  const ids = ['#hello', '#me', '#experience', '#skills', '#projects'];
+  const ids = ['hello', 'me', 'experience', 'skills', 'projects'];
 
   const sectionMap = location.map((element, id) => {
-    return <li key={id} onClick="goto(ids[id])">{element}</li>;
+    return <li key={id}>{element}</li>;
   });
 
   return (
