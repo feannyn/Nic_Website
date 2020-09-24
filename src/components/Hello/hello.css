@@ -12,3 +12,11 @@
 .react {
     max-width: 60%;
 }
+
+.right {
+    border: 1px solid red;
+}
+
+.left {
+    border: 1px solid greenyellow;
+}

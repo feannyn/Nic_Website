@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
 import STRING_CONSTANTS from '../../res/strings';
-import REACT_IMG from '../../res/images/React_Materialize/react.png';
+import { ReactLogo } from '../../res/imagePaths';
 import './hello.css';
 import Photo from '../Photo/photo.js';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Hello = ({ ...props }) => {
   const [hello, setHello] = useState(false);
@@ -14,9 +14,17 @@ const Hello = ({ ...props }) => {
 
   return (
     <div className='typewriter hello'>
-      <h1>HELLO WORLD!</h1>
-      <p>{STRING_CONSTANTS.HELLO}</p>
-      <Photo incl={hello} path={REACT_IMG} imgState={helloComp} />
+      <Container>
+        <h1>HELLO WORLD!</h1>
+        <Row>
+          <Col className='left'>
+            <p>{STRING_CONSTANTS.HELLO}</p>
+          </Col>
+          <Col className='right'>
+            <Photo incl={hello} path={ReactLogo} imgState={helloComp} />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };

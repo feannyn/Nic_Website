@@ -10,12 +10,15 @@ const App = () => {
   const sections = ['Hello', 'Me', 'Skills', 'Projects'];
 
   return (
-    <Content className='content'>
-      <Header />
-      <Body location={sections} />
-      <Footer />
-      <Menu location={sections} />
-    </Content>
+    <div style={{ color: 'white' }}>
+      <Content>
+        <Header />
+        <Body location={sections} />
+        <Footer />
+        <Menu location={sections} />
+      </Content>
+    </div>
+
   );
 };
 

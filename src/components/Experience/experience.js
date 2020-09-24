@@ -4,7 +4,7 @@ import './experience.css';
 import Job from '../Job/job.js';
 import Photo from '../Photo/photo';
 import {
-  Core_Logo
+  CoreLogo
 } from '../../res/imagePaths';
 
 const Experience = () => {
@@ -26,7 +26,7 @@ const Experience = () => {
       <h1> Experience</h1>
       <Row>
         <Col>
-          <Photo incl={false} path={Core_Logo}/>
+          <Photo incl={false} path={CoreLogo}/>
         </Col>
         <Col>
           <Accordion>

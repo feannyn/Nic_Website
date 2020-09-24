@@ -5,14 +5,8 @@
     background-color: blue;
 }
 
-.desc{
+.each{
     width:900px;
     height:500px;
     margin: auto;
-}
-
-.find{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

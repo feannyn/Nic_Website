@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App style={{ color: 'white' }}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import {
   Neverzone,
-  dota2day
+  Dota2day,
+  Fun
 } from '../../res/imagePaths';
 import './projects.css';
 // import options from './styles.js';
@@ -11,7 +12,8 @@ import Photo from '../Photo/photo.js';
 const Projects = () => {
   const images = [
     Neverzone,
-    dota2day
+    Dota2day,
+    Fun
   ];
 
   const [proj, setProjImage] = useState(true);
@@ -35,9 +37,9 @@ const Projects = () => {
   };
 
   return (
-    <div className='projects '>
+    <div className='projects carousel-inner'>
       <h1>Projects</h1>
-      <Carousel className='desc'>
+      <Carousel className='each' touch={true}>
         {
           generateProjects()
         }

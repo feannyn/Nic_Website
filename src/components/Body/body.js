@@ -8,19 +8,13 @@ import Projects from '../Projects/projects.js';
 import Skills from '../Skills/skills.js';
 
 const Body = ({ ...props }) => {
-  const sections = [Hello, Me, Experience, Skills, Projects];
-  const ids = ['hello', 'me', 'experience', 'skills', 'projects'];
-
-  const bodySections =
-            sections.map(
-              (Element, id) => {
-                return <Element key={id} id={ids[id]}/>;
-              }
-            );
-
   return (
     <>
-      {bodySections}
+      <Hello />
+      <Me />
+      <Experience />
+      <Skills />
+      <Projects />
     </>
   );
 };
