@@ -1,5 +1,4 @@
 import React from 'react';
-import { Accordion, Container, Row, Col } from 'react-bootstrap';
 import './experience.css';
 import Job from '../Job/job.js';
 import Photo from '../Photo/photo';
@@ -12,31 +11,30 @@ const Experience = () => {
     'Virtru',
     'I2x/FSU',
     'Citi: Business',
-    'Citi: Tech',
-    'law 1',
-    'Law 2'
+    'Citi: Tech'
   ];
 
   const jobRender = jobs.map((element, i) => {
-    return <Job evKey={i + 1} key={i} job={element} />;
+    return (
+      // This needs to be a job object
+      <div key={i} className='dimensions'>
+        <h2>element {i}</h2>
+        {/* Need to place photo of company here */}
+        <div className='overlay overdime'>
+          <h2>overlay {i}</h2>
+          {/* Place secondary photo here of company */}
+        </div>
+      </div>
+    );
   });
 
   return (
-    <Container>
-      <h1> Experience</h1>
-      <Row>
-        <Col>
-          <Photo incl={false} path={CoreLogo}/>
-        </Col>
-        <Col>
-          <Accordion>
-            {
-              jobRender
-            }
-          </Accordion>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <h1>Experience</h1>
+      <div className='experience'>
+        {jobRender}
+      </div>
+    </>
   );
 };
 
